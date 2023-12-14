@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.loader {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: white;
+}
+.loader::after {
+  content: "";
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: calc(50vh - 20px) auto;
+  border: 2px solid black;
+  border-top: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  animation: spinner 1s ease-in-out 0s infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container {
+  width: 375px;
+  margin: 10px auto;
+}
+.container .overlay-img {
+  position: relative;
+  width: 100%;
+  margin-bottom: 300px;
+}
+.container .overlay-img img {
+  width: 100%;
+}
+.container .overlay-img .overlay-after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.container .overlay-img .overlay-after .overlay-after-item {
+  height: 10%;
+  background-color: black;
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.4s ease;
+}
+
+/*# sourceMappingURL=style.css.map */
