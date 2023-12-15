@@ -8,7 +8,7 @@ let observer = new IntersectionObserver(([entrie]) => {
         const index = child.dataset.index ;
       
         child.style.transform = `scaleY(0)`;
-        child.style.transitionDelay = `${index * 200}ms` ;
+        child.style.transitionDelay = `${index * 100}ms` ;
       }
 
       observer.unobserve(entrie.target)
